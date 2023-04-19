@@ -1,0 +1,39 @@
+import remiseras.*
+import clientes.*
+import cadete.*
+//---------------------------------------------------
+test "lucia (reemplazando a Mariela)
+	lleva a Melina (trabajando para Ludmila), 10KM" {
+		
+	lucia.reemplazaA(mariela)
+	melina.trabajaPara(ludmila)
+	
+	assert.equals(150, lucia.precioViaje(melina,10))
+}
+//---------------------------------------------------
+test "lucia (reemplazando a Mariela)
+	lleva a Melina (trabajando para Ludmila), 1KM" {
+		
+	lucia.reemplazaA(mariela)
+	melina.trabajaPara(ludmila)
+	
+	assert.equals(50, lucia.precioViaje(melina,1))
+}
+//---------------------------------------------------
+test "lucia (reemplazando a Gabriela)
+	lleva a Melina (trabajando para Ludmila), 10KM" {
+		
+	lucia.reemplazaA(gabriela)
+	melina.trabajaPara(ludmila)
+	
+	assert.equals(180, lucia.precioViaje(melina,10))
+}
+//---------------------------------------------------
+test "lucia (reemplazando a Gabriela)
+	lleva a Melina (trabajando para Ludmila), 1KM" {
+		
+	lucia.reemplazaA(gabriela)
+	melina.trabajaPara(ludmila)
+	
+	assert.equals(18, lucia.precioViaje(melina,1))
+}
